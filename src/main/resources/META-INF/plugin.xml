@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>io.eroshenkoam.idea.idea</id>
+    <vendor email="eroshenkoam@qameta.io" url="http://eroshenkoam.io">Artem Eroshenko</vendor>
+
+    <description><![CDATA[This plugin allow to sync autotests with Jira]]></description>
+
+    <extensions defaultExtensionNs="com.intellij"/>
+
+    <actions>
+        <group id="eroshenkoam.idea" text="Jira Sync" description="Jira menu">
+            <add-to-group group-id="ProjectViewPopupMenuRefactoringGroup" anchor="last"/>
+            <action id="eroshenkoam.idea.jira.keys" class="io.eroshenkoam.idea.JiraKeyImportAction"
+                    text="Import Jira keys" description="Add tms link from jira"/>
+            <action id="eroshenkoam.idea.jira.lables" class="io.eroshenkoam.idea.JiraLabelsImportAction"
+                    text="Import Jira labels" description="Add tags from jira"/>
+            <action id="eroshenkoam.idea.testcase.export" class="io.eroshenkoam.idea.TestCaseExportAction"
+                    text="Export Test Cases" description="Add tags from jira"/>
+            <action id="eroshenkoam.allure.migration" class="io.eroshenkoam.idea.AllureMigrationAction"
+                    text="Migrate Allure" description="Migrate Allure Annotations"/>
+        </group>
+    </actions>
+
+</idea-plugin>
