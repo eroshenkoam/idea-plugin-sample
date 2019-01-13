@@ -9,6 +9,9 @@ import retrofit2.http.Query;
  */
 public interface JiraClient {
 
+    @GET("api/2/myself")
+    JiraUser getUser();
+
     @GET("api/2/search")
     JiraFilter findIssue(@Query(value = "jql", encoded = true) String jql);
 
