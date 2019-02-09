@@ -3,6 +3,7 @@ package io.eroshenkoam.idea.jira;
 import io.eroshenkoam.idea.retrofit.BasicAuthInterceptor;
 import io.eroshenkoam.idea.retrofit.DefaultCallAdapterFactory;
 import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
@@ -38,8 +39,12 @@ public class JiraClientBuilder {
     }
 
     public JiraClient build() {
+        HttpLoggingInterceptor logger = new HttpLoggingInterceptor();
+        logger.setLevel(HttpLoggingInterceptor.Level.BODY);
+
         final OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(new BasicAuthInterceptor(username, password))
+                .addInterceptor(logger)
                 .build();
 
         final Retrofit retrofit = new Retrofit.Builder()

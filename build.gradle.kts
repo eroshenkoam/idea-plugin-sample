@@ -42,6 +42,7 @@ dependencies {
     compile("commons-io:commons-io:2.6")
     compile("com.squareup.retrofit2:retrofit:2.4.0")
     compile("com.squareup.retrofit2:converter-jackson:2.4.0")
+    compile("com.squareup.okhttp3:logging-interceptor:3.12.1")
 }
 
 configure<IntelliJPluginExtension> {

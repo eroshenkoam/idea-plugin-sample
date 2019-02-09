@@ -9,7 +9,7 @@ public class AddFavoritesExportTest {
     private BasicSteps steps;
 
     @Test
-    @TmsLink("AE-5")
+    @TmsLink("NEW-2")
     @Features({@Feature("Favorites"), @Feature("Notes")})
     @Stories({@Story("Add to favorites after adding note")})
     @DisplayName("Добавление в избранное после создания заметки")
@@ -22,7 +22,7 @@ public class AddFavoritesExportTest {
     }
 
     @Test
-    @TmsLink("AE-4")
+    @TmsLink("NEW-3")
     @Features({@Feature("Favorites"), @Feature("Notes")})
     @Stories({@Story("Delete from favorites after deleting note")})
     @DisplayName("Удаление из избранного после удаления заметки")

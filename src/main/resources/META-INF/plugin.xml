@@ -15,10 +15,12 @@
                     text="Import Jira keys" description="Add tms link from jira"/>
             <action id="eroshenkoam.idea.jira.lables" class="io.eroshenkoam.idea.JiraLabelsImportAction"
                     text="Import Jira labels" description="Add tags from jira"/>
-            <action id="eroshenkoam.idea.testcase.export" class="io.eroshenkoam.idea.TestCaseExportAction"
-                    text="Export Test Cases" description="Add tags from jira"/>
             <action id="eroshenkoam.allure.migration" class="io.eroshenkoam.idea.AllureMigrationAction"
                     text="Migrate Allure" description="Migrate Allure Annotations"/>
+            <action id="eroshenkoam.idea.testcase.export" class="io.eroshenkoam.idea.TestCaseExportAction"
+                    text="Export Test Cases" description="Add tags from jira"/>
+            <action id="eroshenkoam.idea.jira.export" class="io.eroshenkoam.idea.JiraTestCaseExportAction"
+                    text="Export Test Cases to Jira" description="Add tags from jira"/>
         </group>
     </actions>
 

@@ -5,6 +5,7 @@ import io.qameta.allure.Features;
 import io.qameta.allure.Stories;
 import io.qameta.allure.Story;
 import io.qameta.allure.TmsLink;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -16,6 +17,7 @@ public class AddFavoritesAfterNoteTest {
 
     @Test
     @TmsLink("AE-5")
+    @DisplayName("")
     @Features({@Feature("First Feature"), @Feature("Second Feature")})
     @Stories({@Story("First Story"), @Story("Second Story")})
     public void shouldAddToFavoriteAfterNodeTest() {

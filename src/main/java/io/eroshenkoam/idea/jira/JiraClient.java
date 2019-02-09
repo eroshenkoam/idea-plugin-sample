@@ -1,6 +1,8 @@
 package io.eroshenkoam.idea.jira;
 
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -17,5 +19,8 @@ public interface JiraClient {
 
     @GET("api/2/issue/{key}")
     JiraIssue getIssue(@Path("key") String key);
+
+    @POST("api/2/issue")
+    JiraIssue createIssue(@Body JiraIssue issue);
 
 }
